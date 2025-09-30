@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ntokozo-bit.github.io/my-website/sitemap.xml
