@@ -5,14 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Daily Tools — Simple, Fast, Free</title>
         <meta name="description" content="Tiny free tools that help you every day. Fast, mobile-friendly, and safe." />
+        <link rel="canonical" href="https://YOUR_USERNAME.github.io/my-website/" />
         <link rel="preload" href="styles.css" as="style" />
         <link rel="stylesheet" href="styles.css" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
         <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext y='50%25' x='50%25' text-anchor='middle' dominant-baseline='central' font-size='48'%3E🛠️%3C/text%3E%3C/svg%3E" />
         <meta name="theme-color" content="#111111" />
-        <noscript>
-            This site works best with JavaScript enabled, but the tools will still show basic results.
-        </noscript>
+        <meta property="og:title" content="Daily Tools — Simple, Fast, Free" />
+        <meta property="og:description" content="Tiny free tools that help you every day. Fast, mobile-friendly, and safe." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://YOUR_USERNAME.github.io/my-website/" />
         <script type="application/ld+json">
         {
             "@context":"https://schema.org",
@@ -34,6 +36,7 @@
                 <nav class="nav">
                     <a href="#tools" rel="noopener">Tools</a>
                     <a href="#about" rel="noopener">About</a>
+                    <a href="privacy.html" rel="noopener">Privacy</a>
                     <a href="#contact" rel="noopener">Contact</a>
                 </nav>
             </div>
@@ -43,15 +46,15 @@
             <section class="hero">
                 <div class="wrap">
                     <h2>Tiny tools that save minutes every day</h2>
-                    <p>Fast, mobile-friendly, and secure. Start with our first tool below.</p>
-                    <a class="btn" href="#tools">Try a tool</a>
+                    <p>Fast, mobile-friendly, and secure. Start with our tools below.</p>
+                    <a class="btn" href="#tools">Open tools</a>
                 </div>
             </section>
 
             <section id="tools" class="tools">
                 <div class="wrap">
-                    <h3>Tool #1: Word Counter (no copy/paste limits)</h3>
-                    <p class="muted">Why? People search for this a lot. It’s useful and fast to build. Later we’ll add more tools and ads to reach $1/day.</p>
+                    <h3>Tool #1: Word Counter</h3>
+                    <p class="muted">Paste text to see words, characters, sentences, and paragraphs.</p>
 
                     <div class="card">
                         <label for="wc-input" class="label">Type or paste your text:</label>
@@ -68,7 +71,37 @@
                             <button id="wc-clear" class="btn btn-outline" type="button">Clear</button>
                             <button id="wc-copy" class="btn" type="button">Copy Stats</button>
                         </div>
-                        <p class="tiny muted">Your text never leaves your device. We don’t store anything.</p>
+                        <p class="tiny muted">Your text never leaves your device.</p>
+                    </div>
+
+                    <h3 style="margin-top:24px;">Tool #2: Case Converter</h3>
+                    <p class="muted">Turn your text into UPPERCASE, lowercase, Title Case, or Sentence case.</p>
+
+                    <div class="card">
+                        <label for="cc-input" class="label">Type or paste your text:</label>
+                        <textarea id="cc-input" class="textarea" rows="6" placeholder="Paste your text..."></textarea>
+                        <div class="actions">
+                            <button class="btn btn-outline" id="cc-upper" type="button">UPPERCASE</button>
+                            <button class="btn btn-outline" id="cc-lower" type="button">lowercase</button>
+                            <button class="btn" id="cc-title" type="button">Title Case</button>
+                            <button class="btn" id="cc-sentence" type="button">Sentence case</button>
+                            <button class="btn btn-outline" id="cc-copy" type="button">Copy</button>
+                            <button class="btn btn-outline" id="cc-clear" type="button">Clear</button>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top:24px;">Tool #3: URL Encoder / Decoder</h3>
+                    <p class="muted">Make links safe (encode) or readable (decode).</p>
+
+                    <div class="card">
+                        <label for="url-input" class="label">Type or paste text/URL:</label>
+                        <textarea id="url-input" class="textarea" rows="4" placeholder="E.g. https://example.com/?q=hello world"></textarea>
+                        <div class="actions">
+                            <button class="btn" id="url-encode" type="button">Encode</button>
+                            <button class="btn btn-outline" id="url-decode" type="button">Decode</button>
+                            <button class="btn btn-outline" id="url-copy" type="button">Copy</button>
+                            <button class="btn btn-outline" id="url-clear" type="button">Clear</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -90,7 +123,7 @@
 
         <footer class="site-footer">
             <div class="wrap">
-                <small>© <span id="year"></span> Daily Tools · <a href="#" rel="noopener">Privacy</a></small>
+                <small>© <span id="year"></span> Daily Tools · <a href="privacy.html" rel="noopener">Privacy</a></small>
             </div>
         </footer>
 
