@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Daily Tools — Simple, Fast, Free</title>
+        <meta name="description" content="Tiny free tools that help you every day. Fast, mobile-friendly, and safe." />
+        <link rel="preload" href="styles.css" as="style" />
+        <link rel="stylesheet" href="styles.css" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext y='50%25' x='50%25' text-anchor='middle' dominant-baseline='central' font-size='48'%3E🛠️%3C/text%3E%3C/svg%3E" />
+        <meta name="theme-color" content="#111111" />
+        <noscript>
+            This site works best with JavaScript enabled, but the tools will still show basic results.
+        </noscript>
+        <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"WebSite",
+            "name":"Daily Tools",
+            "url":"https://YOUR_USERNAME.github.io/my-website/",
+            "potentialAction":{
+                "@type":"SearchAction",
+                "target":"https://YOUR_USERNAME.github.io/my-website/?q={search_term_string}",
+                "query-input":"required name=search_term_string"
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="wrap">
+                <h1 class="logo">Daily <span>Tools</span></h1>
+                <nav class="nav">
+                    <a href="#tools" rel="noopener">Tools</a>
+                    <a href="#about" rel="noopener">About</a>
+                    <a href="#contact" rel="noopener">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="wrap">
+                    <h2>Tiny tools that save minutes every day</h2>
+                    <p>Fast, mobile-friendly, and secure. Start with our first tool below.</p>
+                    <a class="btn" href="#tools">Try a tool</a>
+                </div>
+            </section>
+
+            <section id="tools" class="tools">
+                <div class="wrap">
+                    <h3>Tool #1: Word Counter (no copy/paste limits)</h3>
+                    <p class="muted">Why? People search for this a lot. It’s useful and fast to build. Later we’ll add more tools and ads to reach $1/day.</p>
+
+                    <div class="card">
+                        <label for="wc-input" class="label">Type or paste your text:</label>
+                        <textarea id="wc-input" class="textarea" rows="8" placeholder="Paste your text here..."></textarea>
+
+                        <div class="stats" id="wc-stats" aria-live="polite">
+                            <div><strong id="wc-words">0</strong><span>Words</span></div>
+                            <div><strong id="wc-chars">0</strong><span>Characters</span></div>
+                            <div><strong id="wc-sentences">0</strong><span>Sentences</span></div>
+                            <div><strong id="wc-paragraphs">0</strong><span>Paragraphs</span></div>
+                        </div>
+
+                        <div class="actions">
+                            <button id="wc-clear" class="btn btn-outline" type="button">Clear</button>
+                            <button id="wc-copy" class="btn" type="button">Copy Stats</button>
+                        </div>
+                        <p class="tiny muted">Your text never leaves your device. We don’t store anything.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div class="wrap">
+                    <h3>About</h3>
+                    <p>We build small, helpful tools that work great on phones. More tools are coming soon.</p>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="wrap">
+                    <h3>Contact</h3>
+                    <p>Questions or ideas? Email: <a href="mailto:hello@example.com" rel="noopener">hello@example.com</a></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrap">
+                <small>© <span id="year"></span> Daily Tools · <a href="#" rel="noopener">Privacy</a></small>
+            </div>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
