@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Online Word Counter Tool</title>
+    <meta name="description" content="Count words, characters, sentences, and paragraphs instantly. 100% free, no ads, no signup." />
+    <link rel="canonical" href="https://YOUR_USERNAME.github.io/my-website/word-counter.html" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <h1 class="logo">Daily <span>Tools</span></h1>
+            <nav class="nav">
+                <a href="index.html#tools">Home</a>
+                <a href="case-converter.html">Case Converter</a>
+                <a href="url-encoder.html">URL Encoder</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="tools">
+        <div class="wrap">
+            <h2>Free Online Word Counter</h2>
+            <p>This simple tool counts words, characters, sentences, and paragraphs in real time. Perfect for students, writers, bloggers, and social media posts.</p>
+
+            <div class="card">
+                <label for="wc-input" class="label">Type or paste your text:</label>
+                <textarea id="wc-input" class="textarea" rows="8" placeholder="Paste your text here..."></textarea>
+
+                <div class="stats" id="wc-stats">
+                    <div><strong id="wc-words">0</strong><span>Words</span></div>
+                    <div><strong id="wc-chars">0</strong><span>Characters</span></div>
+                    <div><strong id="wc-sentences">0</strong><span>Sentences</span></div>
+                    <div><strong id="wc-paragraphs">0</strong><span>Paragraphs</span></div>
+                </div>
+
+                <div class="actions">
+                    <button id="wc-clear" class="btn btn-outline">Clear</button>
+                    <button id="wc-copy" class="btn">Copy Stats</button>
+                </div>
+            </div>
+
+            <section class="about">
+                <h3>Why use our word counter?</h3>
+                <ul>
+                    <li>✅ Works offline in your browser</li>
+                    <li>✅ No character limit</li>
+                    <li>✅ Safe & secure — text never leaves your device</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <small>© <span id="year"></span> Daily Tools</small>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
