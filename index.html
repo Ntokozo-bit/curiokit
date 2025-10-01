@@ -3,136 +3,144 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Daily Tools — Simple, Fast, Free</title>
-        <meta name="description" content="Tiny free tools that help you every day. Fast, mobile-friendly, and safe." />
-        <link rel="canonical" href="https://ntokozo-bit.github.io/my-website/" />
+        <title>CurioKit — Tiny, Fast, Useful Tools</title>
+        <meta name="description" content="CurioKit is a collection of tiny, blazing-fast tools for everyday text and URL tasks. Private, mobile-friendly, and free." />
+        <link rel="canonical" href="https://ntokozo-bit.github.io/curiokit/" />
         <link rel="preload" href="styles.css" as="style" />
         <link rel="stylesheet" href="styles.css" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; base-uri 'self'; form-action 'self'">
-        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext y='50%25' x='50%25' text-anchor='middle' dominant-baseline='central' font-size='48'%3E🛠️%3C/text%3E%3C/svg%3E" />
-        <meta name="theme-color" content="#111111" />
-        <meta property="og:title" content="Daily Tools — Simple, Fast, Free" />
-        <meta property="og:description" content="Tiny free tools that help you every day. Fast, mobile-friendly, and safe." />
+        <!-- CSP: headers are best, but this meta works for GitHub Pages -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext y='58%25' x='50%25' text-anchor='middle' dominant-baseline='central' font-size='52'%3E🔧%3C/text%3E%3C/svg%3E" />
+        <meta name="theme-color" content="#0b0b0b" />
+        <meta property="og:title" content="CurioKit — Tiny, Fast, Useful Tools" />
+        <meta property="og:description" content="A tidy kit of everyday tools: word counter, case converter, URL encoder/decoder, and more." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ntokozo-bit.github.io/my-website/" />
+        <meta property="og:url" content="https://ntokozo-bit.github.io/curiokit/" />
         <script type="application/ld+json">
         {
             "@context":"https://schema.org",
             "@type":"WebSite",
-            "name":"Daily Tools",
-            "url":"https://ntokozo-bit.github.io/my-website/",
+            "name":"CurioKit",
+            "url":"https://ntokozo-bit.github.io/curiokit/",
             "potentialAction":{
                 "@type":"SearchAction",
-                "target":"https://ntokozo-bit.github.io/my-website/?q={search_term_string}",
+                "target":"https://ntokozo-bit.github.io/curiokit/?q={search_term_string}",
                 "query-input":"required name=search_term_string"
             }
         }
         </script>
+        <noscript>Your tools will still work without JavaScript, but interactive features will be limited.</noscript>
     </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJJNL418DX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-DJJNL418DX');
-    </script>
     <body>
         <header class="site-header">
             <div class="wrap">
-                <h1 class="logo">Daily <span>Tools</span></h1>
-                <nav class="nav">
-                    <a href="#tools" rel="noopener">Tools</a>
-                    <a href="#about" rel="noopener">About</a>
-                    <a href="privacy.html" rel="noopener">Privacy</a>
-                    <a href="#contact" rel="noopener">Contact</a>
+                <a class="logo" href="./" aria-label="CurioKit home">Curio<span>Kit</span></a>
+                <nav class="nav" aria-label="Primary">
+                    <a href="#tools">Tools</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="#contact">Contact</a>
                 </nav>
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">☰</button>
             </div>
         </header>
 
-        <main>
+        <main id="content">
             <section class="hero">
                 <div class="wrap">
-                    <h2>Tiny tools that save minutes every day</h2>
-                    <p>Fast, mobile-friendly, and secure. Start with our tools below.</p>
-                    <a class="btn" href="#tools">Open tools</a>
+                    <h1>Tiny tools that save time</h1>
+                    <p>Fast, private, and friendly on phones. Try a tool below or open a full page.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#tools">Open Tools</a>
+                        <a class="btn btn-ghost" href="word-counter.html">Full Word Counter</a>
+                    </div>
                 </div>
             </section>
 
             <section id="tools" class="tools">
                 <div class="wrap">
-                    <h3>Tool #1: Word Counter</h3>
-                    <p class="muted">Paste text to see words, characters, sentences, and paragraphs.</p>
+                    <!-- Tool #1: Word Counter -->
+                    <article class="tool">
+                        <header class="tool-head">
+                            <h2>Word Counter</h2>
+                            <a class="pill" href="word-counter.html" aria-label="Open Word Counter full page">Open full page ↗</a>
+                        </header>
+                        <p class="muted">Paste text to see words, characters, sentences, and paragraphs in real time.</p>
 
-                    <div class="card">
-                        <label for="wc-input" class="label">Type or paste your text:</label>
-                        <textarea id="wc-input" class="textarea" rows="8" placeholder="Paste your text here..."></textarea>
+                        <div class="card">
+                            <label for="wc-input" class="label">Type or paste your text:</label>
+                            <textarea id="wc-input" class="textarea" rows="8" placeholder="Paste your text here..."></textarea>
 
-                        <div class="stats" id="wc-stats" aria-live="polite">
-                            <div><strong id="wc-words">0</strong><span>Words</span></div>
-                            <div><strong id="wc-chars">0</strong><span>Characters</span></div>
-                            <div><strong id="wc-sentences">0</strong><span>Sentences</span></div>
-                            <div><strong id="wc-paragraphs">0</strong><span>Paragraphs</span></div>
+                            <div class="stats" id="wc-stats" aria-live="polite">
+                                <div><strong id="wc-words">0</strong><span>Words</span></div>
+                                <div><strong id="wc-chars">0</strong><span>Characters</span></div>
+                                <div><strong id="wc-sentences">0</strong><span>Sentences</span></div>
+                                <div><strong id="wc-paragraphs">0</strong><span>Paragraphs</span></div>
+                            </div>
+
+                            <div class="actions">
+                                <button id="wc-clear" class="btn btn-outline" type="button">Clear</button>
+                                <button id="wc-copy" class="btn" type="button">Copy Stats</button>
+                            </div>
+                            <p class="tiny muted">Your text stays in your browser. Nothing is uploaded.</p>
                         </div>
+                    </article>
 
-                        <div class="actions">
-                            <button id="wc-clear" class="btn btn-outline" type="button">Clear</button>
-                            <button id="wc-copy" class="btn" type="button">Copy Stats</button>
+                    <!-- Tool #2: Case Converter -->
+                    <article class="tool">
+                        <header class="tool-head">
+                            <h2>Case Converter</h2>
+                            <a class="pill" href="case-converter.html" aria-label="Open Case Converter full page">Open full page ↗</a>
+                        </header>
+                        <p class="muted">UPPERCASE, lowercase, Title Case, or Sentence case — instantly.</p>
+
+                        <div class="card">
+                            <label for="cc-input" class="label">Type or paste your text:</label>
+                            <textarea id="cc-input" class="textarea" rows="6" placeholder="Paste your text..."></textarea>
+                            <div class="actions wrap-stack">
+                                <button class="btn btn-outline" id="cc-upper" type="button">UPPERCASE</button>
+                                <button class="btn btn-outline" id="cc-lower" type="button">lowercase</button>
+                                <button class="btn" id="cc-title" type="button">Title Case</button>
+                                <button class="btn" id="cc-sentence" type="button">Sentence case</button>
+                                <button class="btn btn-outline" id="cc-copy" type="button">Copy</button>
+                                <button class="btn btn-outline" id="cc-clear" type="button">Clear</button>
+                            </div>
                         </div>
-                        <p class="tiny muted">Your text never leaves your device.</p>
-                    </div>
+                    </article>
 
-                    <h3 style="margin-top:24px;">Tool #2: Case Converter</h3>
-                    <p class="muted">Turn your text into UPPERCASE, lowercase, Title Case, or Sentence case.</p>
+                    <!-- Tool #3: URL Encoder / Decoder -->
+                    <article class="tool">
+                        <header class="tool-head">
+                            <h2>URL Encoder / Decoder</h2>
+                            <a class="pill" href="url-encoder.html" aria-label="Open URL Encoder full page">Open full page ↗</a>
+                        </header>
+                        <p class="muted">Make links safe (encode) or readable (decode) with one click.</p>
 
-                    <div class="card">
-                        <label for="cc-input" class="label">Type or paste your text:</label>
-                        <textarea id="cc-input" class="textarea" rows="6" placeholder="Paste your text..."></textarea>
-                        <div class="actions">
-                            <button class="btn btn-outline" id="cc-upper" type="button">UPPERCASE</button>
-                            <button class="btn btn-outline" id="cc-lower" type="button">lowercase</button>
-                            <button class="btn" id="cc-title" type="button">Title Case</button>
-                            <button class="btn" id="cc-sentence" type="button">Sentence case</button>
-                            <button class="btn btn-outline" id="cc-copy" type="button">Copy</button>
-                            <button class="btn btn-outline" id="cc-clear" type="button">Clear</button>
+                        <div class="card">
+                            <label for="url-input" class="label">Type or paste text/URL:</label>
+                            <textarea id="url-input" class="textarea" rows="4" placeholder="E.g. https://example.com/?q=hello world"></textarea>
+                            <div class="actions wrap-stack">
+                                <button class="btn" id="url-encode" type="button">Encode</button>
+                                <button class="btn btn-outline" id="url-decode" type="button">Decode</button>
+                                <button class="btn btn-outline" id="url-copy" type="button">Copy</button>
+                                <button class="btn btn-outline" id="url-clear" type="button">Clear</button>
+                            </div>
                         </div>
-                    </div>
-
-                    <h3 style="margin-top:24px;">Tool #3: URL Encoder / Decoder</h3>
-                    <p class="muted">Make links safe (encode) or readable (decode).</p>
-
-                    <div class="card">
-                        <label for="url-input" class="label">Type or paste text/URL:</label>
-                        <textarea id="url-input" class="textarea" rows="4" placeholder="E.g. https://example.com/?q=hello world"></textarea>
-                        <div class="actions">
-                            <button class="btn" id="url-encode" type="button">Encode</button>
-                            <button class="btn btn-outline" id="url-decode" type="button">Decode</button>
-                            <button class="btn btn-outline" id="url-copy" type="button">Copy</button>
-                            <button class="btn btn-outline" id="url-clear" type="button">Clear</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about" class="about">
-                <div class="wrap">
-                    <h3>About</h3>
-                    <p>We build small, helpful tools that work great on phones. More tools are coming soon.</p>
+                    </article>
                 </div>
             </section>
 
             <section id="contact" class="contact">
                 <div class="wrap">
-                    <h3>Contact</h3>
-                    <p>Questions or ideas? Email: <a href="mailto:ntokozolms10@gmail.com" rel="noopener">ntokozolms10@gmail.com</a></p>
+                    <h2>Contact</h2>
+                    <p>Got a tool idea or found a bug? Say hi:</p>
+                    <p><a href="mailto:ntokozolms10@gmail.com" class="link">ntokozolms10@gmail.com</a></p>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
             <div class="wrap">
-                <small>© <span id="year"></span> Daily Tools · <a href="privacy.html" rel="noopener">Privacy</a></small>
+                <small>© <span id="year"></span> CurioKit · <a href="privacy.html">Privacy</a></small>
             </div>
         </footer>
 
