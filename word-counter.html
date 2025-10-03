@@ -4,18 +4,17 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Word Counter — Fast & Private</title>
-        <meta name="description" content="Count words, characters, sentences, and paragraphs instantly. Works offline. Private by design." />
+        <meta name="description" content="Count words, characters, sentences, and paragraphs instantly. Works offline in your browser. Great for essays, posts, and SEO." />
         <link rel="canonical" href="https://ntokozo-bit.github.io/curiokit/word-counter.html" />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#0b0b0b" />
         <meta http-equiv="Content-Security-Policy" content="
             default-src 'self';
-            img-src 'self' data: https://www.google-analytics.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            img-src 'self' data: https://www.google-analytics.com;
             style-src 'self' 'unsafe-inline';
-            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com;
-            connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
-            frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+            connect-src 'self' https://www.google-analytics.com;
             base-uri 'self'; form-action 'self'">
         <!-- GA -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJJNL418DX"></script>
@@ -25,6 +24,19 @@
             gtag('js', new Date());
             gtag('config', 'G-DJJNL418DX', { anonymize_ip: true, transport_type: 'beacon' });
         </script>
+        <!-- FAQ schema -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"How do I count words online?","acceptedAnswer":{"@type":"Answer","text":"Paste your text into the box and the counters update instantly. You’ll see words, characters, sentences, and paragraphs."}},
+            {"@type":"Question","name":"Is my text saved or uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Everything runs in your browser and never leaves your device."}},
+            {"@type":"Question","name":"What counts as a word?","acceptedAnswer":{"@type":"Answer","text":"A word is any sequence of characters separated by whitespace. Multiple spaces are ignored."}},
+            {"@type":"Question","name":"Can I use it on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes. The page is responsive and works on phones and tablets."}}
+          ]
+        }
+        </script>
     </head>
     <body>
         <header class="site-header">
@@ -32,8 +44,9 @@
                 <a class="logo" href="index.html">Curio<span>Kit</span></a>
                 <nav class="nav">
                     <a href="index.html#tools">Tools</a>
+                    <a href="case-converter.html">Case Converter</a>
+                    <a href="url-encoder.html">URL Encoder</a>
                     <a href="privacy.html">Privacy</a>
-                    <a href="index.html#contact">Contact</a>
                 </nav>
             </div>
         </header>
@@ -41,11 +54,11 @@
         <main class="tools">
             <div class="wrap">
                 <h1>Word Counter</h1>
-                <p class="muted">Paste text to see counts in real time. Nothing leaves your device.</p>
+                <p class="muted">Perfect for essays, blog posts, captions, and SEO snippets. Just paste your text below.</p>
 
                 <div class="card">
                     <label for="wc-input" class="label">Your text:</label>
-                    <textarea id="wc-input" class="textarea" rows="10" placeholder="Paste your text here..."></textarea>
+                    <textarea id="wc-input" class="textarea" rows="12" placeholder="Paste or start typing here..."></textarea>
 
                     <div class="stats" id="wc-stats" aria-live="polite">
                         <div><strong id="wc-words">0</strong><span>Words</span></div>
@@ -59,6 +72,25 @@
                         <button id="wc-copy" class="btn" type="button">Copy Stats</button>
                     </div>
                 </div>
+
+                <section class="about">
+                    <h2>How it helps</h2>
+                    <p>Count limits are common in schools, job applications, social media, and SEO. This tool gives you quick, accurate counts without extra steps.</p>
+                    <h3>Examples</h3>
+                    <ul>
+                        <li>Essay 500 words — see if you’re over or under.</li>
+                        <li>Tweet or caption — keep it short and sweet.</li>
+                        <li>Meta description — aim for ~150–160 characters.</li>
+                    </ul>
+                    <p>Need to change letter cases? Try our <a class="link" href="case-converter.html">Case Converter</a>. Working with links? Use the <a class="link" href="url-encoder.html">URL Encoder / Decoder</a>.</p>
+                </section>
+
+                <section class="faq">
+                    <h2>Word Counter FAQ</h2>
+                    <details><summary>How accurate is the count?</summary><p>It handles multiple spaces and line breaks and counts sentences with punctuation like ., !, or ?</p></details>
+                    <details><summary>Does it work offline?</summary><p>Yes, after the page loads once, most browsers will let it run offline.</p></details>
+                    <details><summary>Can I copy the results?</summary><p>Click “Copy Stats” to copy a small summary to your clipboard.</p></details>
+                </section>
             </div>
         </main>
 
