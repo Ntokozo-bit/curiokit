@@ -4,21 +4,20 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>CurioKit — Tiny, Fast, Useful Tools</title>
-        <meta name="description" content="CurioKit is a collection of tiny, blazing-fast tools for everyday text and URL tasks. Private, mobile-friendly, and free." />
+        <meta name="description" content="CurioKit is a collection of tiny, fast, privacy-friendly tools for everyday text and URL tasks. Word counter, case converter, URL encoder/decoder and more." />
         <link rel="canonical" href="https://ntokozo-bit.github.io/curiokit/" />
         <link rel="preload" href="styles.css" as="style" />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#0b0b0b" />
 
-        <!-- CSP -->
+        <!-- CSP (allows GA) -->
         <meta http-equiv="Content-Security-Policy" content="
             default-src 'self';
-            img-src 'self' data: https://www.google-analytics.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            img-src 'self' data: https://www.google-analytics.com;
             style-src 'self' 'unsafe-inline';
-            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com;
-            connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
-            frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+            connect-src 'self' https://www.google-analytics.com;
             base-uri 'self'; form-action 'self'">
 
         <!-- Google Analytics -->
@@ -43,7 +42,7 @@
             }
         }
         </script>
-        <noscript>Your tools will still work without JavaScript, but interactive features will be limited.</noscript>
+        <noscript>Your tools still work without JavaScript, with fewer features.</noscript>
     </head>
     <body>
         <header class="site-header">
@@ -54,7 +53,7 @@
                     <a href="privacy.html">Privacy</a>
                     <a href="index.html#contact">Contact</a>
                 </nav>
-                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">☰</button>
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
             </div>
         </header>
 
@@ -72,25 +71,22 @@
 
             <section id="tools" class="tools">
                 <div class="wrap">
-                    <!-- Tool #1: Word Counter -->
+                    <!-- Word Counter -->
                     <article class="tool">
                         <header class="tool-head">
                             <h2>Word Counter</h2>
-                            <a class="pill" href="word-counter.html" aria-label="Open Word Counter full page">Open full page ↗</a>
+                            <a class="pill" href="word-counter.html">Open full page ↗</a>
                         </header>
-                        <p class="muted">Paste text to see words, characters, sentences, and paragraphs in real time.</p>
-
+                        <p class="muted">Paste text to see word, character, sentence, and paragraph counts in real time.</p>
                         <div class="card">
                             <label for="wc-input" class="label">Type or paste your text:</label>
                             <textarea id="wc-input" class="textarea" rows="8" placeholder="Paste your text here..."></textarea>
-
                             <div class="stats" id="wc-stats" aria-live="polite">
                                 <div><strong id="wc-words">0</strong><span>Words</span></div>
                                 <div><strong id="wc-chars">0</strong><span>Characters</span></div>
                                 <div><strong id="wc-sentences">0</strong><span>Sentences</span></div>
                                 <div><strong id="wc-paragraphs">0</strong><span>Paragraphs</span></div>
                             </div>
-
                             <div class="actions">
                                 <button id="wc-clear" class="btn btn-outline" type="button">Clear</button>
                                 <button id="wc-copy" class="btn" type="button">Copy Stats</button>
@@ -99,14 +95,13 @@
                         </div>
                     </article>
 
-                    <!-- Tool #2: Case Converter -->
+                    <!-- Case Converter -->
                     <article class="tool">
                         <header class="tool-head">
                             <h2>Case Converter</h2>
-                            <a class="pill" href="case-converter.html" aria-label="Open Case Converter full page">Open full page ↗</a>
+                            <a class="pill" href="case-converter.html">Open full page ↗</a>
                         </header>
                         <p class="muted">UPPERCASE, lowercase, Title Case, or Sentence case — instantly.</p>
-
                         <div class="card">
                             <label for="cc-input" class="label">Type or paste your text:</label>
                             <textarea id="cc-input" class="textarea" rows="6" placeholder="Paste your text..."></textarea>
@@ -121,14 +116,13 @@
                         </div>
                     </article>
 
-                    <!-- Tool #3: URL Encoder / Decoder -->
+                    <!-- URL Encoder / Decoder -->
                     <article class="tool">
                         <header class="tool-head">
                             <h2>URL Encoder / Decoder</h2>
-                            <a class="pill" href="url-encoder.html" aria-label="Open URL Encoder full page">Open full page ↗</a>
+                            <a class="pill" href="url-encoder.html">Open full page ↗</a>
                         </header>
                         <p class="muted">Make links safe (encode) or readable (decode) with one click.</p>
-
                         <div class="card">
                             <label for="url-input" class="label">Type or paste text/URL:</label>
                             <textarea id="url-input" class="textarea" rows="4" placeholder="E.g. https://example.com/?q=hello world"></textarea>
@@ -146,8 +140,7 @@
             <section id="contact" class="contact">
                 <div class="wrap">
                     <h2>Contact</h2>
-                    <p>Got a tool idea or found a bug? Say hi:</p>
-                    <p><a href="mailto:ntokozolms10@gmail.com" class="link">ntokozolms10@gmail.com</a></p>
+                    <p>Suggestions or bug reports? Email: <a class="link" href="mailto:ntokozolms10@gmail.com">ntokozolms10@gmail.com</a></p>
                 </div>
             </section>
         </main>
