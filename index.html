@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+        // Force debug mode so GA4 DebugView shows you immediately
+        gtag('config', 'G-DJJNL418DX', { debug_mode: true });
+    
+        // Send an extra test event you can see in Realtime & DebugView
+        gtag('event', 'test_ping', {
+            page_title: document.title,
+            page_location: location.href,
+            page_path: location.pathname
+        });
+    </script>
+
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
