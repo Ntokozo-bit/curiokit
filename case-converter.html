@@ -3,19 +3,18 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Case Converter — Uppercase, lowercase, Title Case</title>
-        <meta name="description" content="Quickly convert text to UPPERCASE, lowercase, Title Case, or Sentence case. Private, fast, free." />
+        <title>Case Converter — Uppercase, lowercase, Title Case, Sentence case</title>
+        <meta name="description" content="Convert text to UPPERCASE, lowercase, Title Case, or Sentence case instantly. Clean, private, and mobile-friendly." />
         <link rel="canonical" href="https://ntokozo-bit.github.io/curiokit/case-converter.html" />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#0b0b0b" />
         <meta http-equiv="Content-Security-Policy" content="
             default-src 'self';
-            img-src 'self' data: https://www.google-analytics.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            img-src 'self' data: https://www.google-analytics.com;
             style-src 'self' 'unsafe-inline';
-            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com;
-            connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
-            frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+            connect-src 'self' https://www.google-analytics.com;
             base-uri 'self'; form-action 'self'">
         <!-- GA -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJJNL418DX"></script>
@@ -25,6 +24,18 @@
             gtag('js', new Date());
             gtag('config', 'G-DJJNL418DX', { anonymize_ip: true, transport_type: 'beacon' });
         </script>
+        <!-- FAQ schema -->
+        <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {"@type":"Question","name":"How do I change text to uppercase?","acceptedAnswer":{"@type":"Answer","text":"Paste your text and click UPPERCASE. You can also choose lowercase, Title Case, or Sentence case."}},
+            {"@type":"Question","name":"Do you store my text?","acceptedAnswer":{"@type":"Answer","text":"No, the conversion happens inside your browser only."}},
+            {"@type":"Question","name":"What is Title Case?","acceptedAnswer":{"@type":"Answer","text":"Title Case capitalizes the first letter of each word, useful for headlines."}}
+          ]
+        }
+        </script>
     </head>
     <body>
         <header class="site-header">
@@ -32,8 +43,9 @@
                 <a class="logo" href="index.html">Curio<span>Kit</span></a>
                 <nav class="nav">
                     <a href="index.html#tools">Tools</a>
+                    <a href="word-counter.html">Word Counter</a>
+                    <a href="url-encoder.html">URL Encoder</a>
                     <a href="privacy.html">Privacy</a>
-                    <a href="index.html#contact">Contact</a>
                 </nav>
             </div>
         </header>
@@ -41,11 +53,11 @@
         <main class="tools">
             <div class="wrap">
                 <h1>Case Converter</h1>
-                <p class="muted">Transform your text with one click.</p>
+                <p class="muted">Transform your text with one click. Great for titles, labels, and quick formatting fixes.</p>
 
                 <div class="card">
                     <label for="cc-input" class="label">Your text:</label>
-                    <textarea id="cc-input" class="textarea" rows="10" placeholder="Paste your text..."></textarea>
+                    <textarea id="cc-input" class="textarea" rows="12" placeholder="Paste your text..."></textarea>
                     <div class="actions wrap-stack">
                         <button class="btn btn-outline" id="cc-upper" type="button">UPPERCASE</button>
                         <button class="btn btn-outline" id="cc-lower" type="button">lowercase</button>
@@ -55,6 +67,23 @@
                         <button class="btn btn-outline" id="cc-clear" type="button">Clear</button>
                     </div>
                 </div>
+
+                <section class="about">
+                    <h2>Tips</h2>
+                    <ul>
+                        <li>Use <strong>UPPERCASE</strong> for labels and short codes.</li>
+                        <li><strong>Title Case</strong> is handy for headings and posts.</li>
+                        <li><strong>Sentence case</strong> gives a clean, readable look.</li>
+                    </ul>
+                    <p>Need counts or link tools? Try the <a class="link" href="word-counter.html">Word Counter</a> or the <a class="link" href="url-encoder.html">URL Encoder / Decoder</a>.</p>
+                </section>
+
+                <section class="faq">
+                    <h2>Case Converter FAQ</h2>
+                    <details><summary>Does it handle multiple spaces and lines?</summary><p>Yes, conversions keep your spacing and line breaks intact.</p></details>
+                    <details><summary>Can I undo a conversion?</summary><p>Press Ctrl/Cmd+Z, or click another conversion to switch back.</p></details>
+                    <details><summary>Is it free?</summary><p>Yes, and it runs locally in your browser.</p></details>
+                </section>
             </div>
         </main>
 
