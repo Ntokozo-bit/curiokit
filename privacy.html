@@ -6,25 +6,39 @@
         <title>Privacy · CurioKit</title>
         <meta name="description" content="Privacy policy for CurioKit. Your text stays on your device." />
         <link rel="canonical" href="https://ntokozo-bit.github.io/curiokit/privacy.html" />
+
+        <!-- Styles + Favicon -->
         <link rel="stylesheet" href="styles.css" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#0b0b0b" />
+
+        <!-- CSP: allow GA (and AdSense if you later keep it on this page) -->
+        <meta http-equiv="Content-Security-Policy" content="
+            default-src 'self';
+            img-src 'self' data: https://www.google-analytics.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            style-src 'self' 'unsafe-inline';
+            script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com;
+            connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            frame-src https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net;
+            base-uri 'self'; form-action 'self'">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJJNL418DX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-DJJNL418DX', { anonymize_ip: true, transport_type: 'beacon' });
+        </script>
     </head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJJNL418DX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-DJJNL418DX');
-    </script>
     <body>
         <header class="site-header">
             <div class="wrap">
-                <a class="logo" href="./">Curio<span>Kit</span></a>
-                <nav class="nav">
-                    <a href="./#tools">Tools</a>
-                    <a href="./#contact">Contact</a>
+                <a class="logo" href="index.html" aria-label="CurioKit home">Curio<span>Kit</span></a>
+                <nav class="nav" aria-label="Primary">
+                    <a href="index.html#tools">Tools</a>
+                    <a href="privacy.html" aria-current="page">Privacy</a>
+                    <a href="index.html#contact">Contact</a>
                 </nav>
             </div>
         </header>
@@ -33,10 +47,15 @@
             <div class="wrap">
                 <h1>Privacy Policy</h1>
                 <p>We don’t collect personal data. Tools run entirely in your browser. Text you paste never leaves your device.</p>
+
                 <h2>Analytics</h2>
-                <p>We may add anonymous traffic analytics to improve features. No personally identifiable information will be collected.</p>
+                <p>We use anonymous traffic analytics to improve features. No personally identifiable information is collected. You can block analytics using your browser settings if you prefer.</p>
+
+                <h2>Advertising</h2>
+                <p>If ads are shown, they may use cookies for measurement. You can manage ad personalization in your Google account.</p>
+
                 <h2>Contact</h2>
-                <p>Questions? <a href="mailto:ntokozolms10@gmail.com">ntokozolms10@gmail.com</a></p>
+                <p>Questions? <a class="link" href="mailto:ntokozolms10@gmail.com">ntokozolms10@gmail.com</a></p>
             </div>
         </main>
 
