@@ -85,12 +85,14 @@ body{
 .stats strong{display:block;font-size:22px}
 .stats span{color:var(--muted);font-size:12px}
 
-/* About/Contact */
-.about,.contact{padding:24px 0}
+/* About/Contact/FAQ */
+.about,.contact,.faq{padding:24px 0}
 .link{color:var(--accent);text-decoration:none}
 .link:hover{text-decoration:underline}
 .muted{color:var(--muted)}
 .tiny{font-size:12px}
+.faq details{border:1px solid var(--border);border-radius:10px;padding:10px;margin:8px 0;background:#0e0e0e}
+.faq summary{cursor:pointer;font-weight:700}
 
 /* Footer */
 .site-footer{
